@@ -18,12 +18,13 @@
 
 这些标签用于根据气候对群系进行分类，以支持 Agro Climate 机制。
 
-有关 **Biome Rain** 类型，请查看数据文件夹中的现有标签：
+有关 **群系与天气** 标签，请查看数据文件夹中的现有标签：
 
-* `eclipticseasons:rain/seasonal`、`eclipticseasons:rain/seasonal/hot`、`eclipticseasons:rain/seasonal/cold` – 表示群系具有明显的季节变化。
-* `eclipticseasons:rain/monsoonal` – 表示群系有季节性的干湿周期。
-* `eclipticseasons:is_small` – 用于标记小型群系的特殊标签，一般不需要手动使用。
-* 其余标签 `eclipticseasons:rain/rainless`、`eclipticseasons:rain/arid`、`eclipticseasons:rain/droughty`、`eclipticseasons:rain/soft`、`eclipticseasons:rain/rainy` – 表示群系的降雨季节性变化较小，主要区分降雨量的不同。
+- `eclipticseasons:rain/rainless` – 阻止群系降雨。
+- `eclipticseasons:rain/monsoonal` – 表示群系具有季节性的干湿周期。
+- `eclipticseasons:rain/seasonal`、`eclipticseasons:rain/seasonal/hot`、`eclipticseasons:rain/seasonal/cold`、`eclipticseasons:rain/arid`、`eclipticseasons:rain/droughty`、`eclipticseasons:rain/soft`、`eclipticseasons:rain/rainy` – 主要用于微调群系湿度计算。
+- 若启用了 `NotRainInDesert` 配置，即使添加了上述标签，原版不降雨的群系仍将保持不降雨。
+- `eclipticseasons:is_small` – 用于标记小型群系的特殊标签，一般不需要手动使用。
 
 **群系颜色** 类型与上述类似，实际推荐使用资源包来自定义颜色：
 
@@ -90,15 +91,15 @@
 | 标签名                                | 用途              |
 |:-----------------------------------|:----------------|
 | `eclipticseasons:natural_plants`   | 强制方块兼容节气的生长控制系统 |
-| `eclipticseasons:volatile_plants`  | 强制方块添加随机刻       | 
-| `eclipticseasons:dark_grow_plants` | 适应弱光温室的植物       | 
+| `eclipticseasons:volatile_plants`  | 强制方块添加随机刻       |
+| `eclipticseasons:dark_grow_plants` | 适应弱光温室的植物       |
 
 ### 农业气候区
 
 | 标签名                         | 说明     |
 |:----------------------------|:-------|
 | `eclipticseasons:all`       | 所有     |
-| `eclipticseasons:overworld` | 主世界气候区 | 
+| `eclipticseasons:overworld` | 主世界气候区 |
 
 ## 动物繁衍季节
 
@@ -131,7 +132,7 @@
 | 标签名                                  | 用途        |
 |:-------------------------------------|:----------|
 | `eclipticseasons:habitat/butterfly`  | 蝴蝶粒子源     |
-| `eclipticseasons:habitat/firefly`    | 萤火虫粒子源    | 
+| `eclipticseasons:habitat/firefly`    | 萤火虫粒子源    |
 | `eclipticseasons:none_fallen_leaves` | 不应该有落叶的方块 |
 
 ## 中暑抵抗
@@ -139,9 +140,9 @@
 | 标签名                                       | 类型    |
 |:------------------------------------------|-------|
 | `eclipticseasons:heatstroke_resistant`    | 头盔附魔  |
-| `eclipticseasons:cooling_items`           | 物品栏物品 | 
+| `eclipticseasons:cooling_items`           | 物品栏物品 |
 | `eclipticseasons:heat_protective_helmets` | 头盔物品  |
-| `eclipticseasons:heatstroke_resistant`    | 状态效果  | 
+| `eclipticseasons:heatstroke_resistant`    | 状态效果  |
 
 ## 杂项
 
