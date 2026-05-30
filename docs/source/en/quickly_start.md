@@ -54,6 +54,10 @@ By default:
 
 Even under less-than-ideal conditions, farming is generally still possible.
 
+Further more, in cold regions, winter for crops will be longer, while in hot regions, summer will dominate.
+
+![greenhouse.png](..%2F_static%2Fimage%2Fgreenhouse.png)
+
 ------
 
 # Greenhouses

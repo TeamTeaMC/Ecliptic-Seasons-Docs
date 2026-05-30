@@ -30,7 +30,6 @@
 
 ### Weather
 
-* `UseSolarWeather`: 是否启用局部天气系统。如果碰到不兼容的情况，如有些模组使用一些全局天气参数，特别是服务器端模组，可以用它调整。
 * `ShouldInitWeather`: 是否初始化天气参数，可以在世界创建时就下雨。此外，也会初始化群系的覆雪情况。
 
 ### Temperature
@@ -38,10 +37,6 @@
 * `HeatStroke`: 是否启用中暑。
 * `IceAndSnow`: 原版降雪和结冰，注意这会影响世界。
 * `IceAndSnowMelt`: 原版雪和冰融化，注意这会影响世界。
-
-### Map
-
-* `ChangeMapColor`: 修改地图颜色，如MC地图上颜色，部分地图模组可能不支持。
 
 ### Resource
 

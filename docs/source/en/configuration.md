@@ -12,14 +12,6 @@
 * `SpawnWeight`: Note this value acts as a random boundary; the larger the value, the lower the actual particle spawn
   probability.
 
-### Weather
-
-If Solar Weather is enabled, pay attention to whether these configurations meet your needs.  
-Many client mods and shaders rely on global settings. These settings are mainly for better weather rendering
-aesthetics.  
-The main logic samples the weather around the player and combines it to obtain a new global weather value.  
-If you find strange raindrop sounds annoying, it is generally recommended to use a lower `WeatherBufferDistance` value.
-
 ## Common Configuration Additional Notes
 
 ### Season
@@ -36,8 +28,6 @@ If you find strange raindrop sounds annoying, it is generally recommended to use
 
 ### Weather
 
-* `UseSolarWeather`: Whether to enable the local weather system. If encountering incompatibilities, such as some mods
-  using global weather parameters (especially server mods), this can be used to adjust.
 * `ShouldInitWeather`: Whether to initialize weather parameters; can make it rain when the world is created. Also
   initializes biome snow coverage.
 
