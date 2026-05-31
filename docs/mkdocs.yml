@@ -29,7 +29,7 @@ nav:
               - Seasonal Biome Ambient: 'en/custom/ambient.md'
               - Seasonal Biome Color: 'en/custom/biome_colors.md'
               - Seasonal Biome Music: 'en/custom/music.md'
-              - 进阶:
+              - Advance:
                     - Make a Tree Change Color with the Seasons: 'en/advance/seasonal_tree.md'
                     - Add Smoother Seasonal Transitions to Your Trees: 'en/advance/seasonal_tree_transitions.md'
           - Data packs:

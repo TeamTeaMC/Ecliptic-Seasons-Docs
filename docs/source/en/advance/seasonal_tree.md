@@ -256,7 +256,6 @@ Keep the rest of the configuration the same.
 
 After completing seasonal textures, you can continue reading:
 
-- [Season Models / Season Definitions](../custom/season_definitions.md)
 - [Snow Models / Snow Definitions](../custom/snow_definitions.md)
 - [Fallen Leaves](../custom/fallen_leaves.md)
 

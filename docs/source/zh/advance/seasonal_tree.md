@@ -253,7 +253,6 @@ assets/example/textures/block/
 
 完成季节贴图后，你还可以继续阅读：
 
-- [季节模型（Season Definitions）](../custom/season_definitions.md)
 - [覆雪模型（Snow Definitions）](../custom/snow_definitions.md)
 - [落叶粒子（Fallen Leaves）](../custom/fallen_leaves.md)
 
