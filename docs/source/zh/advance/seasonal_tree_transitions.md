@@ -213,7 +213,7 @@ assets/example/eclipticseasons/season_definitions/cherry_leaves.json
 
 这两个 ID 需要在 `model_definitions` 中定义。
 
-## 创建 model_definitions
+### 创建 model_definitions
 
 路径：
 
@@ -290,7 +290,7 @@ assets/example/textures/block/cherry_leaves_spring_0.png
 assets/example/textures/block/cherry_leaves_spring_1.png
 ```
 
-## 完整示例：春分时樱花逐渐开放
+### 完整示例：春分时樱花逐渐开放
 
 文件：
 

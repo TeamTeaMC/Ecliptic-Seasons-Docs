@@ -231,7 +231,7 @@ Both IDs must be defined in `model_definitions`.
 
 ---
 
-# Creating model_definitions
+## Creating model_definitions
 
 Location:
 
@@ -310,7 +310,7 @@ assets/example/textures/block/cherry_leaves_spring_1.png
 
 ---
 
-# Complete Example: Cherry Blossoms Blooming During the Spring Equinox
+## Complete Example: Cherry Blossoms Blooming During the Spring Equinox
 
 File:
 
