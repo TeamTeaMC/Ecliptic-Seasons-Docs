@@ -29,6 +29,9 @@ nav:
               - Seasonal Biome Ambient: 'en/custom/ambient.md'
               - Seasonal Biome Color: 'en/custom/biome_colors.md'
               - Seasonal Biome Music: 'en/custom/music.md'
+              - 进阶:
+                    - Make a Tree Change Color with the Seasons: 'en/advance/seasonal_tree.md'
+                    - Add Smoother Seasonal Transitions to Your Trees: 'en/advance/seasonal_tree_transitions.md'
           - Data packs:
               - Crop Growth: 'en/data/crop.md'
               - Agro Climate Zones: 'en/data/agro_climate.md'
@@ -58,6 +61,9 @@ nav:
               - 季节音效: 'zh/custom/ambient.md'
               - 群系颜色: 'zh/custom/biome_colors.md'
               - 季节音乐: 'zh/custom/music.md'
+              - 进阶:
+                  - 做一棵随季节变色的树: 'zh/advance/seasonal_tree.md'
+                  - 让你的树有更好的季节过渡: 'zh/advance/seasonal_tree_transitions.md'
           - 数据包:
               - 作物生长: 'zh/data/crop.md'
               - 农业气候区: 'zh/data/agro_climate.md'
