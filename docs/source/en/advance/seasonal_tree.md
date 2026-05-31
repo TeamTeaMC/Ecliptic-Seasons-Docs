@@ -55,9 +55,9 @@ For most leaves, it is recommended to try `season_textures` first.
 
 ------
 
-# Method 1: Using season_textures
+## Method 1: Using season_textures
 
-## Resource Pack Structure
+### Resource Pack Structure
 
 ```text
 assets/
@@ -73,7 +73,7 @@ assets/
          └─ cherry_leaves_winter.png
 ```
 
-## Creating Seasonal Textures
+### Creating Seasonal Textures
 
 Prepare four leaf textures:
 
@@ -93,7 +93,7 @@ For example:
 | Autumn | Red          |
 | Winter | Yellow-brown |
 
-## Creating a Seasonal Texture Definition
+### Creating a Seasonal Texture Definition
 
 Create:
 
@@ -149,7 +149,7 @@ assets/example/eclipticseasons/season_textures/cherry_leaves.json
 
 After this is done, the leaves will automatically use the corresponding texture in each season.
 
-## When Should You Not Use season_textures?
+### When Should You Not Use season_textures?
 
 Although `season_textures` is convenient, it is not suitable for every block.
 
@@ -171,7 +171,7 @@ For these cases, use `season_definitions` instead.
 
 ------
 
-# Method 2: Using season_definitions
+## Method 2: Using season_definitions
 
 If you want to switch the entire model instead of only replacing textures, use `season_definitions`.
 
@@ -224,7 +224,7 @@ This method is more suitable for:
 
 ------
 
-# Adding Seasonal Support to Azalea Leaves
+## Adding Seasonal Support to Azalea Leaves
 
 To make azalea leaves change with the seasons as well:
 
@@ -252,7 +252,7 @@ Keep the rest of the configuration the same.
 
 ------
 
-# Next Steps
+## Next Steps
 
 After completing seasonal textures, you can continue reading:
 

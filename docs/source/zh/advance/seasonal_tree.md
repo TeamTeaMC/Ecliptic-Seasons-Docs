@@ -55,9 +55,9 @@ Ecliptic Seasons 提供两种方式实现季节外观。
 
 ------
 
-# 方法一：使用 season_textures
+## 方法一：使用 season_textures
 
-## 资源包结构
+### 资源包结构
 
 ```text
 assets/
@@ -73,7 +73,7 @@ assets/
          └─ cherry_leaves_winter.png
 ```
 
-## 创建季节贴图
+### 创建季节贴图
 
 准备四张树叶贴图：
 
@@ -93,7 +93,7 @@ cherry_leaves_winter.png
 | 秋   | 红色   |
 | 冬   | 黄褐色 |
 
-## 创建季节定义
+### 创建季节定义
 
 创建：
 
@@ -146,7 +146,7 @@ assets/example/eclipticseasons/season_textures/cherry_leaves.json
 
 完成后，树叶将在不同季节自动使用对应贴图。
 
-## 什么时候不能使用 season_textures？
+### 什么时候不能使用 season_textures？
 
 虽然它非常方便，但并非适用于所有方块。
 
@@ -168,7 +168,7 @@ assets/example/eclipticseasons/season_textures/cherry_leaves.json
 
 ------
 
-# 方法二：使用 season_definitions
+## 方法二：使用 season_definitions
 
 如果你希望切换整个模型，而不仅仅是贴图，可以使用 `season_definitions`。
 
@@ -221,7 +221,7 @@ assets/example/textures/block/
 
 ------
 
-# 给杜鹃树叶添加季节支持
+## 给杜鹃树叶添加季节支持
 
 如果想让杜鹃树叶也随季节变化：
 
@@ -249,7 +249,7 @@ assets/example/textures/block/
 
 ------
 
-# 下一步
+## 下一步
 
 完成季节贴图后，你还可以继续阅读：
 
