@@ -337,7 +337,7 @@ Contents:
       ]
     },
     {
-      "start": "clear_and_bright",
+      "start": "fresh_green",
       "end": "grain_rain",
       "mid": "example:cherry_leaves_spring_1"
     }
