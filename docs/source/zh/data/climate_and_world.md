@@ -1,19 +1,18 @@
 # 气候与世界规则
 
-这些文件都位于 `data/<命名空间>/eclipticseasons/<类型>/`。从最接近目标的一类开始，不必同时覆盖全部系统。
+动态注册表文件位于 `data/<命名空间>/eclipticseasons/<类型>/`。
 
-| 类型 | 主要用途 |
-|---|---|
-| `agro_climate` | 把全局节气映射为地区农业季节 |
-| `biome_climate_setting` | 修改群系随节气变化的温度、降水等气候值 |
-| `biome_rain` | 设置局部天气的持续时间、间隔、概率与效果 |
-| `season_cycle` / `season_phase` | 自定义日历显示与阶段 |
-| `snow_definitions` | 为方块配置覆雪模型引用 |
-| `special_days` | 在一年中的指定区间显示特殊日期 |
+| 类型 | 用途 | 需求程度 |
+|---|---|---|
+| `biome_climate_setting` | 修改群系随节气变化的温度、降水量等气候值 | 常用 |
+| `weather_dimension` | 为维度指定统一天气所使用的核心群系 | 常用 |
+| `biome_rain` | 定义核心群系在各节气的晴雨参数 | 进阶 |
+| `agro_climate` | 把全局节气映射为地区农业季节 | 进阶 |
+| `snow_definitions` | 让新方块引用覆雪模型 | 常用 |
+| `season_cycle` / `season_phase` | 自定义日历阶段 | 进阶 |
+| `special_days` | 定义特殊日期 | 可选 |
 
-## 修改群系气候
-
-`biome_climate_setting/savanna.json` 的最小形式：
+## 群系气候
 
 ```json
 {
@@ -27,33 +26,24 @@
 }
 ```
 
-## 修改局部天气
+保存为 `biome_climate_setting/<名称>.json`。只填写需要改变的气候属性和节气。
 
-`biome_rain/<名称>.json` 以 `solar_terms` 为键保存每个节气的天气参数：
+## 维度统一天气
+
+当前天气不是按群系独立运行，而是由维度的核心群系统一决定。默认主世界等价于：
 
 ```json
 {
-  "biomes": "#c:is_temperate/overworld",
-  "weathers": {
-    "solar_terms": {
-      "rain_water": {
-        "rain": { "min_inclusive": 16000, "max_inclusive": 24000, "type": "minecraft:uniform" },
-        "rain_delay": { "min_inclusive": 32000, "max_inclusive": 50000, "type": "minecraft:uniform" },
-        "rain_chance": 0.5,
-        "thunder_chance": 0.32,
-        "special_effect": "eclipticseasons:light_rain_snow",
-        "snow_melt_speed": 0.85
-      }
-    }
-  }
+  "core": "minecraft:plains",
+  "dimension": "minecraft:overworld"
 }
 ```
 
-时间单位为游戏刻。只写需要改变的节气，避免复制整份默认表。
+保存为 `weather_dimension/<名称>.json`。`core` 的季节降雨结果会赋给该维度内其他群系。若为其他启用季节的维度增加规则，应选择该维度确实存在且气候行为合适的核心群系。
+
+`biome_rain/<名称>.json` 仍可定义节气降雨概率、持续时间、间隔、雷暴和融雪倍率，但在当前模型中应把它理解为**核心群系的全维度天气参数**，而不是局部天气配置。默认主世界主要读取平原匹配到的规则。
 
 ## 覆雪方块
-
-服务端数据 `snow_definitions/<名称>.json` 决定方块与模型定义的关联：
 
 ```json
 {
@@ -64,7 +54,7 @@
 }
 ```
 
-`mid` 指向资源包中的模型定义。仅改视觉时不要覆盖这里。
+保存为 `snow_definitions/<名称>.json`。`mid` 指向资源包模型定义；新方块通常还需要客户端资源包规则。
 
 ## 特殊日期
 
@@ -77,4 +67,7 @@
 }
 ```
 
-`start`、`end` 是指定节气内部的相对区间。复杂的农业气候映射和 `season_phase` 建议从模组生成资源复制一个最接近的文件后删减，而不是手写 24 节气全集。
+复杂的 `agro_climate`、`season_cycle` 和 `season_phase` 应从当前生成资源复制最接近的例子并删减。
+
+!!! warning "不再支持 Local Weather"
+    `hasLocalWeather` 固定为 `false`。不要把 `biome_rain` 写成“每个群系独立下雨”；它与 `weather_dimension` 共同控制核心群系驱动的维度统一天气。

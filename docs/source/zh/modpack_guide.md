@@ -6,7 +6,7 @@
 |---|---|---|
 | 最常用 | 让新作物受季节或湿度影响 | [农业内容](data/agriculture.md) |
 | 最常用 | 让配方、进度或战利品随模拟等级启用 | [模拟等级条件](data/simulation_conditions.md) |
-| 常用 | 调整某类群系的温度、降雨或积雪 | [气候与世界规则](data/climate_and_world.md) |
+| 常用 | 调整群系温度、维度统一天气或积雪 | [气候与世界规则](data/climate_and_world.md) |
 | 进阶 | 自定义农业气候映射、日历阶段或特殊日期 | [气候与世界规则](data/climate_and_world.md) |
 
 ## 目录约定
