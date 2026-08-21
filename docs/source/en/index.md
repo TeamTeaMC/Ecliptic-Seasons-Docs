@@ -1,7 +1,21 @@
 ![Ecliptic Seasons](https://github.com/user-attachments/assets/549d6626-d78e-4901-8b96-f420a6c2d3ea)
 
-
 Ecliptic Seasons is a seasonal environment mod inspired by the traditional 24 Solar Terms, bringing dynamic seasons, weather, agriculture, ecology, and atmosphere to Minecraft.
+
+## Where should I start?
+
+| I want to… | Start with |
+| --- | --- |
+| Install and understand the basics | [Quick start](quickly_start.md) |
+| Learn seasons, weather, snow, and crops | [Seasons and solar terms](season.md), then [Climate](climate.md) |
+| Configure a client or server | [Configuration](configuration.md) |
+| Build a modpack or datapack | [Datapack overview](datapack.md) |
+| Create seasonal textures or models | [Seasonal textures](custom/season_textures.md) and [Seasonal models](custom/season_definitions.md) |
+| Diagnose a crash or visual problem | [Troubleshooting](troubleshooting.md) |
+| Check whether a Minecraft version is maintained | [Version support](version_support.md) |
+
+!!! tip "Players do not need to read the technical sections"
+    Complete the quick start and use the in-game configuration screen first. The datapack and resource-pack sections are mainly for creators and modpack authors.
 
 ### LICENSE
 *   For code: BSD-3
@@ -9,7 +23,7 @@ Ecliptic Seasons is a seasonal environment mod inspired by the traditional 24 So
 *   Please do not port arbitrarily, communication can make the community better, and please respect our work.
 *   For disc *Snowless Homeland*: authorized by Beishanwei & Orangesoda for distribution and instrumental adaptation.
 
-* ## Main Features
+## Main Features
 
   If summarized in one sentence, the goal of Ecliptic Seasons is:
 

@@ -1,5 +1,25 @@
 ![Ecliptic Seasons](https://github.com/user-attachments/assets/549d6626-d78e-4901-8b96-f420a6c2d3ea)
 
+节气是一个基于中国传统二十四节气的 Minecraft 季节环境模拟模组。天气、温度、昼夜长度、植被、农业、动物和环境氛围都会随时间变化。
+
+## 我应该从哪里开始？
+
+| 你是…… | 建议入口 |
+| --- | --- |
+| 第一次安装的玩家 | [快速开始](quickly_start.md) |
+| 想了解季节、天气和作物机制的玩家 | [季节与节气](season.md) → [气候、天气与覆雪](climate.md) |
+| 想调整游玩强度的玩家或服主 | [配置指南](configuration.md) |
+| 整合包或数据包作者 | [数据包入门](datapack.md) |
+| 资源包作者 | [季节贴图](custom/season_textures.md) 与 [季节模型](custom/season_definitions.md) |
+| 遇到崩溃、渲染或兼容问题的用户 | [故障排查](troubleshooting.md) |
+| 想确认某个 Minecraft 版本是否继续维护的用户 | [版本支持](version_support.md) |
+
+!!! tip "新玩家不需要阅读数据包和资源包章节"
+    先完成快速开始，并使用游戏内配置界面即可。后半部分文档主要面向整合包、数据包和资源包作者。
+
+
+原简介：
+
 “节气”是一个我的世界Java版本季节模组，支持丰富的配置和不错的性能。
 
 与一般季节模组不同的是，节气一年被划分为四个季节，二十四个时期，也称节气。
