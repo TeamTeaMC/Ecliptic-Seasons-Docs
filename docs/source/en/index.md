@@ -9,8 +9,8 @@ Ecliptic Seasons is a seasonal environment mod inspired by the traditional 24 So
 | Install and understand the basics | [Quick start](quickly_start.md) |
 | Learn seasons, weather, snow, and crops | [Seasons and solar terms](season.md), then [Climate](climate.md) |
 | Configure a client or server | [Configuration](configuration.md) |
-| Build a modpack or datapack | [Datapack overview](datapack.md) |
-| Create seasonal textures or models | [Seasonal textures](custom/season_textures.md) and [Seasonal models](custom/season_definitions.md) |
+| Build a modpack or datapack | [Data packs and modpacks](modpack_guide.md) |
+| Create seasonal textures or models | [Resource-pack authoring](resourcepack.md) and [Seasonal visuals](custom/visuals.md) |
 | Diagnose a crash or visual problem | [Troubleshooting](troubleshooting.md) |
 | Check whether a Minecraft version is maintained | [Version support](version_support.md) |
 

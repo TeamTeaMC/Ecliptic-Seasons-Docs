@@ -9,8 +9,8 @@
 | 第一次安装的玩家 | [快速开始](quickly_start.md) |
 | 想了解季节、天气和作物机制的玩家 | [季节与节气](season.md) → [气候、天气与覆雪](climate.md) |
 | 想调整游玩强度的玩家或服主 | [配置指南](configuration.md) |
-| 整合包或数据包作者 | [数据包入门](datapack.md) |
-| 资源包作者 | [季节贴图](custom/season_textures.md) 与 [季节模型](custom/season_definitions.md) |
+| 整合包或数据包作者 | [数据包与整合包入门](modpack_guide.md) |
+| 资源包作者 | [资源包入门](resourcepack.md) 与 [季节视觉](custom/visuals.md) |
 | 遇到崩溃、渲染或兼容问题的用户 | [故障排查](troubleshooting.md) |
 | 想确认某个 Minecraft 版本是否继续维护的用户 | [版本支持](version_support.md) |
 

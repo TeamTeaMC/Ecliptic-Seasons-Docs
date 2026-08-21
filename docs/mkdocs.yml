@@ -30,32 +30,15 @@ nav:
           - Configuration: en/configuration.md
           - Compatibility: en/compat.md
       - Datapack and modpack guide:
-          - Overview: en/datapack.md
-          - Simulation-level conditions: en/data/simulation_conditions.md
-          - Crop growth: en/data/crop.md
-          - Agro-climate zones: en/data/agro_climate.md
-          - Biome climate settings: en/data/biome_climate_setting.md
-          - Snow timing: en/data/snow_term.md
-          - Weather parameters: en/data/biome_rain.md
-          - Calendar display: en/data/season_cycle.md
-          - Seasonal trades: en/data/season_quest.md
-          - Loot and seasonal conditions: en/data/loot.md
-          - Seasonal block changes: en/data/season_definitions.md
-          - Humidity structures: en/data/humidity_control.md
-          - Wetter structures (legacy): en/data/wetter.md
-          - Special days: en/data/special_days.md
+          - Start here: en/modpack_guide.md
+          - Common integrations:
+              - Agricultural data: en/data/agriculture.md
+              - Simulation-level conditions: en/data/simulation_conditions.md
+              - Climate and world rules: en/data/climate_and_world.md
       - Resource-pack guide:
-          - Model definitions: en/custom/model_definitions.md
-          - Snow-covered models: en/custom/snow_definitions.md
-          - Seasonal models: en/custom/season_definitions.md
-          - Seasonal textures: en/custom/season_textures.md
-          - Fallen leaves: en/custom/fallen_leaves.md
-          - Biome ambience: en/custom/ambient.md
-          - Biome colors: en/custom/biome_colors.md
-          - Seasonal music: en/custom/music.md
-          - Advanced:
-              - Seasonal tree colors: en/advance/seasonal_tree.md
-              - Smooth tree transitions: en/advance/seasonal_tree_transitions.md
+          - Start here: en/resourcepack.md
+          - Common visuals: en/custom/visuals.md
+          - Optional audio: en/custom/audio.md
       - Developer API: en/developer_api.md
   - 中文:
       - 从这里开始:
@@ -71,33 +54,15 @@ nav:
           - 配置指南: zh/configuration.md
           - 兼容性: zh/compat.md
       - 数据包与整合包:
-          - 入门与约定: zh/datapack.md
-          - 按模拟等级启用内容: zh/data/simulation_conditions.md
-          - 作物生长: zh/data/crop.md
-          - 农业气候区: zh/data/agro_climate.md
-          - 群系气候设定: zh/data/biome_climate_setting.md
-          - 下雪时间: zh/data/snow_term.md
-          - 群系与天气: zh/data/biome_rain.md
-          - 天气区域: zh/data/weather_region.md
-          - 自定义日历: zh/data/season_cycle.md
-          - 季节商人交易: zh/data/season_quest.md
-          - 战利品与季节条件: zh/data/loot.md
-          - 季节与方块变化: zh/data/season_definitions.md
-          - 湿度调节结构: zh/data/humidity_control.md
-          - Wetter 结构（旧）: zh/data/wetter.md
-          - 特殊日期: zh/data/special_days.md
+          - 从这里开始: zh/modpack_guide.md
+          - 常用兼容:
+              - 农业内容: zh/data/agriculture.md
+              - 按模拟等级启用内容: zh/data/simulation_conditions.md
+              - 气候与世界规则: zh/data/climate_and_world.md
       - 资源包制作:
-          - 模型映射: zh/custom/model_definitions.md
-          - 覆雪方块与模型: zh/custom/snow_definitions.md
-          - 四季模型: zh/custom/season_definitions.md
-          - 季节贴图: zh/custom/season_textures.md
-          - 落叶粒子: zh/custom/fallen_leaves.md
-          - 群系环境音: zh/custom/ambient.md
-          - 群系颜色: zh/custom/biome_colors.md
-          - 季节音乐: zh/custom/music.md
-          - 进阶:
-              - 让树木随季节变色: zh/advance/seasonal_tree.md
-              - 平滑的季节过渡: zh/advance/seasonal_tree_transitions.md
+          - 从这里开始: zh/resourcepack.md
+          - 常用视觉: zh/custom/visuals.md
+          - 可选声音: zh/custom/audio.md
       - 开发者 API: zh/developer_api.md
 
 markdown_extensions:

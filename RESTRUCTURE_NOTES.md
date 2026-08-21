@@ -14,6 +14,9 @@
 - Added bilingual simulation-level resource conditions with recipe, advancement, and loot-table examples.
 - Added bilingual public API and event guidance, including integration paths that are now deprecated.
 - Verified the second-pass additions against the uploaded current NeoForge source tree and generated resources dated 2026-08-21.
+- Consolidated the data-pack and resource-pack reference from dozens of registry-oriented pages into ten bilingual, task-oriented pages.
+- Prioritized crop compatibility, simulation-level gating, climate/weather integration, and seasonal visuals for modpack authors; moved audio and complex calendar/model systems behind concise advanced guidance.
+- Removed superseded pages so site search cannot return conflicting legacy schemas.
 
 ## Recommended second phase
 
