@@ -31,6 +31,7 @@ nav:
           - Compatibility: en/compat.md
       - Datapack and modpack guide:
           - Overview: en/datapack.md
+          - Simulation-level conditions: en/data/simulation_conditions.md
           - Crop growth: en/data/crop.md
           - Agro-climate zones: en/data/agro_climate.md
           - Biome climate settings: en/data/biome_climate_setting.md
@@ -55,6 +56,7 @@ nav:
           - Advanced:
               - Seasonal tree colors: en/advance/seasonal_tree.md
               - Smooth tree transitions: en/advance/seasonal_tree_transitions.md
+      - Developer API: en/developer_api.md
   - 中文:
       - 从这里开始:
           - 模组概览: zh/index.md
@@ -70,6 +72,7 @@ nav:
           - 兼容性: zh/compat.md
       - 数据包与整合包:
           - 入门与约定: zh/datapack.md
+          - 按模拟等级启用内容: zh/data/simulation_conditions.md
           - 作物生长: zh/data/crop.md
           - 农业气候区: zh/data/agro_climate.md
           - 群系气候设定: zh/data/biome_climate_setting.md
@@ -95,6 +98,7 @@ nav:
           - 进阶:
               - 让树木随季节变色: zh/advance/seasonal_tree.md
               - 平滑的季节过渡: zh/advance/seasonal_tree_transitions.md
+      - 开发者 API: zh/developer_api.md
 
 markdown_extensions:
   - toc:
