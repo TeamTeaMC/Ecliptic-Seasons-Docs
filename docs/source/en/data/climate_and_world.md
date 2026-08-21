@@ -30,7 +30,7 @@ Save this under `biome_climate_setting/<name>.json`. Include only the climate pr
 
 ## Dimension-wide weather
 
-Weather is no longer simulated independently per biome. A dimension's core biome drives its shared result. The default Overworld rule is equivalent to:
+Weather is no longer simulated independently per biome. The mod always registers and enables the built-in **Rain Together** pack. Its `data/rain_together/eclipticseasons/weather_dimension/plains.json` contains:
 
 ```json
 {
@@ -39,9 +39,11 @@ Weather is no longer simulated independently per biome. A dimension's core biome
 }
 ```
 
-Save this under `weather_dimension/<name>.json`. The seasonal rain result of `core` is assigned to the other biomes in that dimension. Rules for another season-enabled dimension should select a core biome that exists there and has suitable climate behavior.
+This makes plains the Overworld weather core. Plains matches `biome_rain/better_plains.json`; the resulting seasonal weather is then assigned to the other Overworld biomes.
 
-`biome_rain/<name>.json` can still define seasonal rain chance, duration, delay, thunder, and snow-melt multipliers. Under the current model, treat it as **dimension-wide parameters selected through the core biome**, not as Local Weather. The default Overworld primarily uses the rule matching plains.
+Custom rules use the same `weather_dimension/<name>.json` path. Rules for another season-enabled dimension should select a core biome that exists there and has suitable climate behavior.
+
+`biome_rain/<name>.json` can still define seasonal rain chance, duration, delay, thunder, and snow-melt multipliers. Under the current model, treat it as **dimension-wide parameters selected through the core biome**, not as Local Weather.
 
 ## Snow-covered blocks
 

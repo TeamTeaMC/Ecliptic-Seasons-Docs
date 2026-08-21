@@ -17,7 +17,8 @@
 - Consolidated the data-pack and resource-pack reference from dozens of registry-oriented pages into ten bilingual, task-oriented pages.
 - Prioritized crop compatibility, simulation-level gating, climate/weather integration, and seasonal visuals for modpack authors; moved audio and complex calendar/model systems behind concise advanced guidance.
 - Removed superseded pages so site search cannot return conflicting legacy schemas.
-- Corrected the weather documentation after tracing the full runtime path: Local Weather is disabled, while `weather_dimension` selects a core biome (plains for the default Overworld) whose `biome_rain` result drives shared weather across that dimension.
+- Corrected the weather documentation against the bundled Rain Together pack: its `weather_dimension/plains.json` selects plains, whose `better_plains` seasonal result drives shared Overworld weather.
+- Rebuilt compatibility documentation from current source entry points and removed unsupported legacy compatibility claims.
 
 ## Recommended second phase
 

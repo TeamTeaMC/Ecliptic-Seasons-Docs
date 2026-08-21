@@ -2,9 +2,9 @@
 
 ## Current weather model
 
-Ecliptic Seasons no longer gives each biome an independent Local Weather state. Each enabled dimension uses one core biome to calculate a shared weather result. The default core biome for the Overworld is `minecraft:plains`.
+Ecliptic Seasons no longer gives each biome an independent Local Weather state. The enabled built-in **Rain Together** data pack assigns `minecraft:plains` as the Overworld weather core, so plains calculates the shared weather result.
 
-The core biome's clear/rain result is assigned to the other biomes in that dimension. In the default Overworld, rain timing therefore follows the plains rule rather than the biome beneath the player. Each biome still uses its own temperature to render the shared precipitation as rain or snow and maintains its own snow depth.
+`biome_rain/better_plains.json` supplies the seasonal curve matched by plains, and that clear/rain result is assigned to the other Overworld biomes. Rain timing therefore does not follow the biome beneath the player. Each biome still uses its own temperature to render the shared precipitation as rain or snow and maintains its own snow depth.
 
 ## Biome climate
 

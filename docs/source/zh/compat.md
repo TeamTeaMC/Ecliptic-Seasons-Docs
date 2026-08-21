@@ -1,99 +1,46 @@
-这里未列出的模组并不一定不兼容，有些mod为本模组提供了兼容，可以在CurseForge页面查看被依赖列表。
+# 兼容性
 
-## 基本说明
+本页只列当前源码中能找到明确入口的兼容。未列出不等于不兼容，只表示节气没有为其提供可验证的专用代码。
 
-目前支持来自Serene Seasons的季节性作物标签。然而，我建议使用Ecliptic Seasons和即将推出的数据包中的标签，特别是因为季节标签缺乏湿度信息。
+## 玩家最需要关注
 
-## 现代版本 (1.21-1.20)
+| 模组或系统 | 当前源码中的处理 | 注意事项 |
+|---|---|---|
+| Sodium | 季节颜色混合、覆雪模型与区块渲染接入 | 渲染异常时先同时更新双方版本 |
+| Iris | 覆雪表面着色、冰水识别和渲染上下文接入 | 兼容选项只在检测到 Iris 时出现 |
+| Distant Horizons | LOD 季节颜色、覆雪与冻结水体更新 | 兼容 Mixin 要求 DH `3.0.0-b` 或更高；强制刷新全部 LOD 可能造成明显卡顿 |
+| Voxy | LOD 导入、模型、纹理与季节更新接入 | 当前配置项仍标注为测试功能，不建议整合包默认强制开启自动刷新 |
+| Fabric Renderer Indigo | 方块模型与覆雪渲染接入 | 主要用于 Fabric 渲染路径 |
+| CTM / Continuity | 读取 CTM 资源并识别 Continuity | 复杂覆雪模型仍应在目标组合中实机检查 |
 
-### Sodium
+## 信息与配方界面
 
-自NeoForge-1.21起支持，主要是关于渲染雪覆盖的方块、性能加速、CTM模型支持。
+| 模组 | 提供的信息 |
+|---|---|
+| Jade | 作物生长、动物繁殖、温室核心与炼药锅信息 |
+| The One Probe | 作物、动物、温室核心与炼药锅信息 |
+| JEI | 湿度调节、季节任务及相关配方分类 |
+| KubeJS | 通过专用插件类提供脚本接入 |
 
-### Distant Horizons
+作物诊断是否显示在 Jade 或 TOP 中，由 `Compat.ShowCropGrowthInfoInProbe` 控制。
 
-在1.21-NeoForge和1.20.1-Forge中支持，主要是LOD以正确的季节颜色渲染（即使在重新加载关卡时），并且LOD会动态更新。
+## 数据兼容
 
-### Embeddium
+节气可以读取使用 Serene Seasons 作物标签的内容，并可按季节标签自动推导湿度。相关选项包括：
 
-在所有版本中支持，主要是关于渲染雪覆盖的方块、性能加速、CTM模型支持。
+- `SereneSeasonsCropTag`
+- `SereneSeasonsCropTagIgnoreSapling`
+- `SereneSeasonCropTagBasedHumidity`
+- `ModsWithoutSereneSeasonBasedHumidity`
 
-### Optifine
+新数据包仍建议直接使用节气的作物数据，因为它能同时表达季节、湿度和农业气候区。
 
-在1.20中支持，主要是关于渲染雪覆盖的方块。
+## 如何判断能否加入整合包
 
-### Oculus
+1. 在目标 Minecraft、加载器和模组版本组合中测试，而不是依据旧版本兼容记录。
+2. 检查树叶颜色、覆雪方块、着色器和远景 LOD 四个最容易冲突的场景。
+3. 若只有作物不受控制，优先补标签或数据包，不要立即要求 Java 兼容层。
+4. 报告问题时附模组列表、版本、日志，以及关闭 Sodium/Iris/DH/Voxy 后的对照结果。
 
-在1.20中支持，主要是提供多维度绑定生物群系预测。
-
-### Iris
-
-在1.21中支持，主要是提供多维度绑定生物群系预测。
-
-### JourneyMap
-
-在所有版本中支持，主要是提供正确的冬季颜色。
-
-### Cold Sweat
-
-在所有版本中提供兼容性，主要是季节性温度变化，可在配置中进行配置。
-
-### Legendary Survival Overhaul
-
-在所有版本中提供兼容性，主要是季节性温度变化，可在配置中进行配置。
-
-### Snowy Spirit
-
-在所有版本中支持，主要是关于滑雪和圣诞节季节。
-
-### Haunted Harvest
-
-在1.20中支持，主要是关于万圣节季节。
-
-### Incontrol
-
-在所有版本中支持，主要是提供季节检查，注意如果使用SolarWeather，全局天气检查没有意义。
-
-### Fabric Renderer API和CTM模组（Continuity...）
-
-在1.20.1中，必须使用Embeddium，如果CTM方块未处于“覆雪”状态（如Stay True中的玻璃块），则可以共存。
-
-在1.21.1中，如果使用Sodium或Vanilla环境，ctm模型也可以在“覆雪”状态下无冲突。
-
-### Dynamic Trees
-
-提供季节支持。
-
----
-
-## 旧版本 (1.19-1.16)
-
-### Embeddium
-
-在所有版本中支持，主要是关于渲染雪覆盖的方块、性能加速。
-
-### Optifine
-
-在旧版Forge版本中支持，主要是关于渲染雪覆盖的方块。
-
-### Cold Sweat
-
-在所有版本中提供兼容性，主要是季节性温度变化，可在配置中进行配置。
-
-### Legendary Survival Overhaul
-
-在1.16.5中提供兼容性，主要是季节性温度变化，可在配置中进行配置。
-
-### Fancy Block Particles - Renewed
-
-由于该模组的一些限制，必须在旧版本中提供兼容性才能正常工作，主要是关于季节性粒子和方块渲染模式。
-
-### Dynamic Trees
-
-提供季节支持。
-
----
-
-## 不兼容列表
-
-//待办
+!!! warning "不再声明的旧兼容"
+    当前源码没有 JourneyMap、Cold Sweat、Legendary Survival Overhaul、Snowy Spirit、Haunted Harvest、InControl、Dynamic Trees 或 OptiFine 的专用入口。本页不保证也不否定它们能共同运行。
