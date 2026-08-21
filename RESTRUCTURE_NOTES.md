@@ -19,6 +19,7 @@
 - Removed superseded pages so site search cannot return conflicting legacy schemas.
 - Corrected the weather documentation against the bundled Rain Together pack: its `weather_dimension/plains.json` selects plains, whose `better_plains` seasonal result drives shared Overworld weather.
 - Rebuilt compatibility documentation from current source entry points and removed unsupported legacy compatibility claims.
+- Separated base-mod compatibility from the independent MultiMod Patch and Bundles companion projects; documented the Bundles loader without inventing a package list absent from the uploaded source.
 
 ## Recommended second phase
 

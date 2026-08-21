@@ -31,6 +31,7 @@ nav:
           - Compatibility: en/compat.md
       - Datapack and modpack guide:
           - Start here: en/modpack_guide.md
+          - Essential tags: en/data/tags.md
           - Common integrations:
               - Agricultural data: en/data/agriculture.md
               - Simulation-level conditions: en/data/simulation_conditions.md
@@ -55,6 +56,7 @@ nav:
           - 兼容性: zh/compat.md
       - 数据包与整合包:
           - 从这里开始: zh/modpack_guide.md
+          - 基础标签: zh/data/tags.md
           - 常用兼容:
               - 农业内容: zh/data/agriculture.md
               - 按模拟等级启用内容: zh/data/simulation_conditions.md

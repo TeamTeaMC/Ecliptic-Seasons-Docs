@@ -38,7 +38,7 @@ This uses the simplified greenhouse design of classic seasons mods: crops only r
 
 ## Categories
 
-- **Environment:** season length, initial solar term, calendar offsets, valid dimensions, daylight duration, weather probability, and snow behavior.
+- **Environment:** season length, calendar offsets, daylight, and weather. `RainChanceMultiplier=100` preserves data-pack probability (default `120`), while thunder defaults to `80`; sleep clearing, desert precipitation, and snow speeds are also configurable. See [Climate, weather, and snow](climate.md).
 - **Gameplay:** crop growth, humidity, bone meal, greenhouses, breeding, bees, fishing, and heatstroke.
 - **Visual:** chunk-render refreshes, seasonal colors, flowers, snow layers, particles, and HUD options.
 - **Advanced:** Serene Seasons, Distant Horizons, and Voxy integrations, plus debugging and experimental settings.

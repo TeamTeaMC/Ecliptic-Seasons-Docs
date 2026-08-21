@@ -6,6 +6,24 @@ Ecliptic Seasons no longer gives each biome an independent Local Weather state. 
 
 `biome_rain/better_plains.json` supplies the seasonal curve matched by plains, and that clear/rain result is assigned to the other Overworld biomes. Rain timing therefore does not follow the biome beneath the player. Each biome still uses its own temperature to render the shared precipitation as rain or snow and maintains its own snow depth.
 
+## Changing rain frequency
+
+Players and server owners can use **Environment → Weather** in the configuration screen:
+
+| Setting | Default | Effect |
+|---|---:|---|
+| `UseSolarWeather` | `true` | Uses seasonal weather scheduling. When disabled, vanilla global clear/rain scheduling remains, while seasonal precipitation and snow logic may still operate |
+| `RainChanceMultiplier` | `120` | Overall rain-chance percentage. `100` keeps data-pack values, `50` halves them, `200` doubles them, and `0` prevents Ecliptic Seasons from randomly starting rain |
+| `ThunderChanceMultiplier` | `80` | Thunder-chance percentage, calculated in the same way |
+| `NoRainInDeserts` | `false` | Keeps biomes without natural precipitation free of rain and snow when enabled |
+| `ClearAfterSleep` | `true` | Clears current weather after sleeping |
+| `SnowAccumulationSpeedMultiplier` | `1.0` | Atmospheric snow-cover accumulation speed |
+| `SnowMeltSpeedMultiplier` | `1.0` | Snow-cover recession speed |
+
+The rain-start weight is approximately `solar-term rain_chance × current downfall × RainChanceMultiplier / 100`. A single multiplier therefore preserves seasonal differences.
+
+Use configuration multipliers when the whole pack should be wetter or drier. Use a data pack only when individual solar terms need different curves.
+
 ## Biome climate
 
 Base temperature, downfall, elevation, and the current solar term influence:

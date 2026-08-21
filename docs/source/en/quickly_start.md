@@ -8,7 +8,7 @@ This guide covers the most important features to help you get started.
 
 ------
 
-# Solar Terms and Seasons
+## Solar Terms and Seasons
 
 A year in Ecliptic Seasons is divided into twenty-four Solar Terms.
 
@@ -24,7 +24,7 @@ Whenever a new Solar Term begins, a notification will appear in chat.
 
 ------
 
-# Growth Detector
+## Growth Detector
 
 If you plan to do any farming, one of the first tools you should craft is the:
 
@@ -40,7 +40,7 @@ When crops grow slowly, the Growth Detector is usually the fastest way to find o
 
 ------
 
-# Seasonal Farming
+## Seasonal Farming
 
 When seasonal farming is enabled, crops may perform differently depending on the season.
 
@@ -60,7 +60,7 @@ Further more, in cold regions, winter for crops will be longer, while in hot reg
 
 ------
 
-# Greenhouses
+## Greenhouses
 
 If you want a more stable farming environment, consider building a greenhouse.
 
@@ -76,19 +76,19 @@ For long-term farming, greenhouses are often the most effective solution.
 
 ------
 
-# Humidity Control
+## Humidity Control
 
 Some crops are sensitive to humidity.
 
 You can adjust greenhouse humidity using the following devices:
 
-## Humidity Tank
+### Humidity Tank
 
 Increases humidity within the surrounding area.
 
 Useful for dry environments and crops that prefer higher humidity.
 
-## Greenhouse Dehumidifier
+### Greenhouse Dehumidifier
 
 Reduces humidity within the surrounding area.
 
@@ -98,7 +98,7 @@ If you are unsure about local humidity conditions, use a Humidity Meter to check
 
 ------
 
-# Season Cores
+## Season Cores
 
 Season Cores are important components of the greenhouse system.
 
@@ -106,7 +106,7 @@ If you want to grow crops outside their preferred season, you will usually need 
 
 ------
 
-# How Do I Obtain a Season Core?
+### How Do I Obtain a Season Core?
 
 Season Cores can be obtained through several methods:
 
@@ -118,7 +118,7 @@ They are not required for normal farming, but are usually essential for out-of-s
 
 ------
 
-# Winter and Snow Cover
+## Winter and Snow Cover
 
 As winter arrives, the world gradually develops snowy scenery.
 
@@ -134,7 +134,7 @@ If you prefer traditional snow accumulation, you can enable vanilla-style snow g
 
 ------
 
-# Heatstroke
+## Heatstroke
 
 In hot biomes, prolonged exposure to the midday summer sun may cause **Heatstroke**.
 
@@ -147,9 +147,9 @@ You can avoid it by:
 
 ------
 
-# Frequently Asked Questions
+## Frequently Asked Questions
 
-## Why are my crops growing slowly?
+### Why are my crops growing slowly?
 
 Use a Growth Detector to check:
 
@@ -159,7 +159,7 @@ Use a Growth Detector to check:
 
 ------
 
-## Why does Bone Meal still work?
+### Why does Bone Meal still work?
 
 This is intentional.
 
@@ -167,7 +167,7 @@ By default, Ecliptic Seasons does not completely disable Bone Meal. Seasons and 
 
 ------
 
-## What do I need for out-of-season farming?
+### What do I need for out-of-season farming?
 
 You will generally need:
 
@@ -177,7 +177,7 @@ You will generally need:
 
 ------
 
-## What if snow cover conflicts with my resource pack?
+### What if snow cover conflicts with my resource pack?
 
 Some resource packs and connected-texture mods modify block models, which may cause snow cover rendering issues.
 

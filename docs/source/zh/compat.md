@@ -35,6 +35,25 @@
 
 新数据包仍建议直接使用节气的作物数据，因为它能同时表达季节、湿度和农业气候区。
 
+## 伴生兼容项目
+
+### Ecliptic Seasons: MultiMod Patch
+
+[MultiMod Patch](https://github.com/TeamTeaMC/Ecliptic-Seasons-MultiMod-Patch) 是独立附属模组，通过 Mixin 等方式处理第三方模组兼容，不属于节气本体的兼容保证。其公开兼容表包含 InControl、Pretty Rain、Presence Footsteps、Snowy Spirit、JourneyMap、Cold Sweat、Dynamic Trees、Haunted Harvest、MineColonies、Touhou Little Maid 等，并分别标注 1.21.1 与 1.20.1 状态。
+
+安装前必须按 MultiMod Patch 自己的目标版本检查；旧分支显示支持不代表当前 26.1 可以使用。问题若只在安装 Patch 后出现，应向 Patch 项目报告。
+
+### Ecliptic Seasons: Bundles
+
+Bundles 是独立模组，ID 为 `eclipticseasons_bundles`，用于集中分发可选数据包、资源包和兼容内容。节气本体包含它的加载适配器：
+
+- 扫描 Bundles JAR 中的 `resourcepacks/<包名>/bundle.cfg`；
+- 可按必需模组、Minecraft 版本和客户端/服务端类型决定是否出现；
+- 每个包可以设置默认启用状态和加载优先级；
+- 选项写入 Bundles 自己的配置，并提供独立配置界面。
+
+Bundles 不是新的数据格式；其中每个子包仍使用节气的标准数据包或资源包格式。当前上传源码不包含 Bundles JAR 的实际子包，因此本 Wiki 不列出可能随发行版变化的包清单。
+
 ## 如何判断能否加入整合包
 
 1. 在目标 Minecraft、加载器和模组版本组合中测试，而不是依据旧版本兼容记录。
@@ -42,5 +61,5 @@
 3. 若只有作物不受控制，优先补标签或数据包，不要立即要求 Java 兼容层。
 4. 报告问题时附模组列表、版本、日志，以及关闭 Sodium/Iris/DH/Voxy 后的对照结果。
 
-!!! warning "不再声明的旧兼容"
-    当前源码没有 JourneyMap、Cold Sweat、Legendary Survival Overhaul、Snowy Spirit、Haunted Harvest、InControl、Dynamic Trees 或 OptiFine 的专用入口。本页不保证也不否定它们能共同运行。
+!!! warning "本体与附属模组要分开"
+    当前节气本体源码没有 JourneyMap、Cold Sweat、Snowy Spirit、Haunted Harvest、InControl 或 Dynamic Trees 的专用入口；其中一部分由 MultiMod Patch 提供。Legendary Survival Overhaul 与 OptiFine 在当前两份已核对源码中都没有可验证的专用入口。
