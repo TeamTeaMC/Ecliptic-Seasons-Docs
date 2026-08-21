@@ -23,7 +23,49 @@
 | 不受湿度影响 | `eclipticseasons:crops/unaffected_by_humidity` |
 | 不被恶劣气候杀死 | 方块标签 `eclipticseasons:crops/not_killed_by_climate` |
 
-季节名为 `spring`、`summer`、`autumn`、`winter`，组合示例有 `spring_summer`、`spring_autumn`、`summer_autumn_winter`；四季皆宜使用专门的 `all_seasons`，不是把四个名字串起来。湿度名为 `arid`、`dry`、`average`、`moist`、`humid`；范围示例为 `dry_moist`，单点示例为 `average_average`。
+### 全部季节标签
+
+下表名称可用于方块、物品的 `crops/`，也可用于实体类型的 `breed/`。
+
+| 文件名 / 标签末段 | 适宜季节 |
+|---|---|
+| `spring` | 春 |
+| `summer` | 夏 |
+| `autumn` | 秋 |
+| `winter` | 冬 |
+| `spring_summer` | 春、夏 |
+| `spring_autumn` | 春、秋 |
+| `spring_winter` | 春、冬 |
+| `summer_autumn` | 夏、秋 |
+| `summer_winter` | 夏、冬 |
+| `autumn_winter` | 秋、冬 |
+| `spring_summer_autumn` | 春、夏、秋 |
+| `spring_summer_winter` | 春、夏、冬 |
+| `spring_autumn_winter` | 春、秋、冬 |
+| `summer_autumn_winter` | 夏、秋、冬 |
+| `all_seasons` | 春、夏、秋、冬 |
+
+例如作物方块的春夏标签 ID 是 `eclipticseasons:crops/spring_summer`，文件位置是 `data/eclipticseasons/tags/block/crops/spring_summer.json`；动物的春夏繁殖标签则是 `eclipticseasons:breed/spring_summer`，放在 `tags/entity_type/breed/`。
+
+### 全部湿度标签
+
+| 文件名 / 标签末段 | 允许湿度范围 |
+|---|---|
+| `arid_arid` | 干旱 |
+| `arid_dry` | 干旱—干燥 |
+| `arid_average` | 干旱—普通 |
+| `arid_moist` | 干旱—湿润 |
+| `arid_humid` | 干旱—潮湿 |
+| `dry_dry` | 干燥 |
+| `dry_average` | 干燥—普通 |
+| `dry_moist` | 干燥—湿润 |
+| `dry_humid` | 干燥—潮湿 |
+| `average_average` | 普通 |
+| `average_moist` | 普通—湿润 |
+| `average_humid` | 普通—潮湿 |
+| `moist_moist` | 湿润 |
+| `moist_humid` | 湿润—潮湿 |
+| `humid_humid` | 潮湿 |
 
 一个番茄适合春夏、湿度为普通到潮湿的完整最小数据包需要四个文件：
 
@@ -34,7 +76,7 @@ data/eclipticseasons/tags/item/crops/spring_summer.json
 data/eclipticseasons/tags/item/crops/average_moist.json
 ```
 
-四个文件都使用前文 JSON 格式，分别把 `example:tomato_crop` 或 `example:tomato` 加入 `values`。
+四个文件都使用前文 JSON 格式：两个 `block` 文件的 `values` 写 `example:tomato_crop`，两个 `item` 文件写 `example:tomato`。
 
 ## 群系
 

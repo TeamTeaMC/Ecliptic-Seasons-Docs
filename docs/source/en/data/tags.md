@@ -23,7 +23,49 @@ When a crop has both a block and an item, add both to matching files under `tags
 | Ignore humidity | `eclipticseasons:crops/unaffected_by_humidity` |
 | Survive hostile climate | Block tag `eclipticseasons:crops/not_killed_by_climate` |
 
-Season combinations include `spring_summer`, `spring_autumn`, and `summer_autumn_winter`. Use the dedicated `all_seasons` tag for all four seasons instead of concatenating all four names. Humidity names are `arid`, `dry`, `average`, `moist`, and `humid`; `dry_moist` is a range while `average_average` is a single level.
+### All season tags
+
+The names below apply to crop block/item tags under `crops/` and entity-type tags under `breed/`.
+
+| Filename / final tag segment | Suitable seasons |
+|---|---|
+| `spring` | Spring |
+| `summer` | Summer |
+| `autumn` | Autumn |
+| `winter` | Winter |
+| `spring_summer` | Spring, summer |
+| `spring_autumn` | Spring, autumn |
+| `spring_winter` | Spring, winter |
+| `summer_autumn` | Summer, autumn |
+| `summer_winter` | Summer, winter |
+| `autumn_winter` | Autumn, winter |
+| `spring_summer_autumn` | Spring, summer, autumn |
+| `spring_summer_winter` | Spring, summer, winter |
+| `spring_autumn_winter` | Spring, autumn, winter |
+| `summer_autumn_winter` | Summer, autumn, winter |
+| `all_seasons` | All four seasons |
+
+For example, a spring–summer crop block uses `eclipticseasons:crops/spring_summer` at `data/eclipticseasons/tags/block/crops/spring_summer.json`. The matching animal breeding tag is `eclipticseasons:breed/spring_summer` under `tags/entity_type/breed/`.
+
+### All humidity tags
+
+| Filename / final tag segment | Allowed humidity range |
+|---|---|
+| `arid_arid` | Arid only |
+| `arid_dry` | Arid–dry |
+| `arid_average` | Arid–average |
+| `arid_moist` | Arid–moist |
+| `arid_humid` | Arid–humid |
+| `dry_dry` | Dry only |
+| `dry_average` | Dry–average |
+| `dry_moist` | Dry–moist |
+| `dry_humid` | Dry–humid |
+| `average_average` | Average only |
+| `average_moist` | Average–moist |
+| `average_humid` | Average–humid |
+| `moist_moist` | Moist only |
+| `moist_humid` | Moist–humid |
+| `humid_humid` | Humid only |
 
 A tomato suitable for spring–summer and average–moist humidity needs four minimal files:
 
@@ -34,7 +76,7 @@ data/eclipticseasons/tags/item/crops/spring_summer.json
 data/eclipticseasons/tags/item/crops/average_moist.json
 ```
 
-Use the JSON shown above in each file, adding either `example:tomato_crop` or `example:tomato` to `values`.
+Use the JSON shown above in all four files: put `example:tomato_crop` in the two block files and `example:tomato` in the two item files.
 
 ## Biomes
 
