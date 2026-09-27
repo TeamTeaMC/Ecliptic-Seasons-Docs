@@ -5,6 +5,9 @@ Create seasonal and humidity tags for multiple crops. Drop local mod JARs to sea
 <div class="es-generator" data-es-datapack-generator data-language="en">
 <form>
   <div data-jar-drop class="es-jar-drop"><label>Drop one or more mod JARs here, or choose files<input type="file" accept=".jar,application/java-archive" multiple></label></div>
+  <p data-jar-status role="status" aria-live="polite"></p>
+  <label>Search loaded blocks <input data-catalog-search type="search" placeholder="For example: Barley / biomesoplenty:barley" hidden></label>
+  <div data-catalog-results class="es-catalog-results"></div>
   <p class="es-generator-help">JARs are read locally in your browser and are never uploaded. Block suggestions intersect language entries with blockstate files; names help search, but check the final registry IDs. Blocks without language entries can still be entered manually.</p>
   <label>Target-version pack_format <input name="pack_format" type="number" min="1" max="9999" step="1" value="48" required></label>
   <div data-crop-list></div>

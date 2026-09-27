@@ -5,6 +5,9 @@
 <div class="es-generator" data-es-datapack-generator data-language="zh">
 <form>
   <div data-jar-drop class="es-jar-drop"><label>拖入一个或多个模组 JAR，或点击选择文件<input type="file" accept=".jar,application/java-archive" multiple></label></div>
+  <p data-jar-status role="status" aria-live="polite"></p>
+  <label>搜索已读取的方块 <input data-catalog-search type="search" placeholder="例如：大麦 / Barley / biomesoplenty:barley" hidden></label>
+  <div data-catalog-results class="es-catalog-results"></div>
   <p class="es-generator-help">JAR 仅在你的浏览器中读取，不会上传。候选方块来自语言文件与方块状态文件的交集；名称只帮助检索，最终请核对注册 ID。缺少语言条目的方块仍可手动输入。</p>
   <label>目标版本 pack_format <input name="pack_format" type="number" min="1" max="9999" step="1" value="48" required></label>
   <div data-crop-list></div>

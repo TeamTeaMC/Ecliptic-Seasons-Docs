@@ -9,7 +9,8 @@
     zh: { add: '添加作物', remove: '删除', block: '作物方块 ID', item: '对应物品 ID（可选）',
       seasons: '适宜季节', humidity: '湿度范围', low: '最低', high: '最高',
       seasonNames: ['春', '夏', '秋', '冬'], humidityNames: ['干旱', '干燥', '普通', '湿润', '潮湿'],
-      jarReady: '已读取 {files} 个 JAR，找到 {blocks} 个方块名称和 {items} 个物品名称。',
+      jarReady: '已读取 {files} 个 JAR，找到 {blocks} 个方块名称和 {items} 个物品名称。搜索并点击结果即可添加作物。',
+      loading: '正在读取 {name}…', search: '搜索方块中文名、英文名或 ID', noMatch: '没有匹配的方块。',
       jarError: '无法读取 {name}：{error}', tooLarge: '文件超过 100 MiB。',
       invalid_id: '第 {row} 行的方块或物品 ID 格式错误。',
       invalid_format: '请填写正确的 pack_format 整数。',
@@ -19,7 +20,8 @@
     en: { add: 'Add crop', remove: 'Remove', block: 'Crop block ID', item: 'Corresponding item ID (optional)',
       seasons: 'Growing seasons', humidity: 'Humidity range', low: 'Minimum', high: 'Maximum',
       seasonNames: ['Spring', 'Summer', 'Autumn', 'Winter'], humidityNames: ['Arid', 'Dry', 'Average', 'Moist', 'Humid'],
-      jarReady: 'Read {files} JAR(s): {blocks} block names and {items} item names.',
+      jarReady: 'Read {files} JAR(s): {blocks} block names and {items} item names. Search and click a result to add a crop.',
+      loading: 'Reading {name}…', search: 'Search block name or ID', noMatch: 'No matching blocks.',
       jarError: 'Could not read {name}: {error}', tooLarge: 'File exceeds 100 MiB.',
       invalid_id: 'Invalid block or item ID in row {row}.',
       invalid_format: 'Enter a valid pack_format integer.',
@@ -162,14 +164,44 @@
     const language = root.dataset.language === 'en' ? 'en' : 'zh', t = labels[language];
     const catalogs = { block: new Map(), item: new Map() };
     const list = root.querySelector('[data-crop-list]'), status = root.querySelector('[role="status"]');
+    const jarStatus = root.querySelector('[data-jar-status]');
+    const catalogSearch = root.querySelector('[data-catalog-search]');
+    const catalogResults = root.querySelector('[data-catalog-results]');
     const jarInput = root.querySelector('input[type="file"]');
     const drop = root.querySelector('[data-jar-drop]');
     addRow(list, catalogs, language);
+    function showCatalog() {
+      catalogResults.replaceChildren();
+      const query = catalogSearch.value.trim().toLocaleLowerCase();
+      if (!query) return;
+      let matches = 0;
+      for (const record of catalogs.block.values()) {
+        const title = record[language] || record.en || record.zh || record.id;
+        if (!`${title} ${record.zh} ${record.en} ${record.id}`.toLocaleLowerCase().includes(query)) continue;
+        const result = document.createElement('button');
+        result.type = 'button'; result.textContent = `${title} — ${record.id}`;
+        result.addEventListener('click', () => {
+          const empty = [...list.querySelectorAll('.es-crop-row')].find(row => !row.querySelector('[data-kind="block"]').value.trim());
+          if (empty) empty.querySelector('[data-kind="block"]').value = record.id;
+          else addRow(list, catalogs, language, record.id);
+          const row = empty || list.lastElementChild;
+          if (catalogs.item.has(record.id)) row.querySelector('[data-kind="item"]').value = record.id;
+          catalogSearch.value = ''; catalogResults.replaceChildren();
+          row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+        catalogResults.append(result);
+        if (++matches >= 30) break;
+      }
+      if (!matches) catalogResults.textContent = t.noMatch;
+    }
+    catalogSearch.addEventListener('input', showCatalog);
     root.querySelector('[data-add-crop]').addEventListener('click', () => addRow(list, catalogs, language));
     async function readJars(files) {
       let read = 0;
       for (const file of files) {
         if (!/\.jar$/i.test(file.name)) continue;
+        jarStatus.textContent = format(t.loading, { name: file.name });
+        await new Promise(resolve => setTimeout(resolve, 0));
         try {
           const found = await inspectJar(file);
           for (const kind of ['block', 'item']) for (const [id, record] of found[kind]) {
@@ -177,11 +209,13 @@
           }
           read++;
         } catch (error) {
-          status.textContent = format(t.jarError, { name: file.name, error: t[error.message] || error.message });
+          jarStatus.textContent = format(t.jarError, { name: file.name, error: t[error.message] || error.message });
           return;
         }
       }
-      status.textContent = format(t.jarReady, { files: read, blocks: catalogs.block.size, items: catalogs.item.size });
+      jarStatus.textContent = format(t.jarReady, { files: read, blocks: catalogs.block.size, items: catalogs.item.size });
+      catalogSearch.hidden = !catalogs.block.size;
+      showCatalog();
     }
     jarInput.addEventListener('change', () => readJars(jarInput.files));
     drop.addEventListener('dragover', event => { event.preventDefault(); drop.classList.add('es-dragging'); });
