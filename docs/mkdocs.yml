@@ -85,6 +85,7 @@ extra_css:
   - _static/css/datapack-generator.css
 extra_javascript:
   - _static/js/custom.js
+  - _static/js/jszip.min.js
   - _static/js/datapack-generator.js
 
 docs_dir: source

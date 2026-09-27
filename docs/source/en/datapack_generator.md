@@ -1,36 +1,21 @@
 # Crop data-pack generator
 
-Create season and humidity tags for a crop, then download a data-pack ZIP for your world. This tool uses the tag layout described in this Wiki; verify paths for older versions.
+Create seasonal and humidity tags for multiple crops. Drop local mod JARs to search for blocks and items by localized name or registry ID, or type IDs directly. Each crop can have its own settings; all rows are merged into one data pack.
 
 <div class="es-generator" data-es-datapack-generator data-language="en">
 <form>
-  <label>Crop block ID <input name="block" type="text" placeholder="example:tomato_crop" required></label>
-  <label>Crop item ID (optional) <input name="item" type="text" placeholder="example:tomato"></label>
+  <div data-jar-drop class="es-jar-drop"><label>Drop one or more mod JARs here, or choose files<input type="file" accept=".jar,application/java-archive" multiple></label></div>
+  <p class="es-generator-help">JARs are read locally in your browser and are never uploaded. Block suggestions intersect language entries with blockstate files; names help search, but check the final registry IDs. Blocks without language entries can still be entered manually.</p>
   <label>Target-version pack_format <input name="pack_format" type="number" min="1" max="9999" step="1" value="48" required></label>
-  <p class="es-generator-help">The default 48 comes from the supplied core source. Change it when targeting another Minecraft version.</p>
-  <fieldset><legend>Growing seasons</legend><label><input type="checkbox" name="season" value="spring" checked> Spring</label>
-<label><input type="checkbox" name="season" value="summer" checked> Summer</label>
-<label><input type="checkbox" name="season" value="autumn" > Autumn</label>
-<label><input type="checkbox" name="season" value="winter" > Winter</label></fieldset>
-  <fieldset><legend>Allowed humidity range</legend>
-    <label>Minimum <select name="humidity_low"><option value="arid" >Arid</option>
-<option value="dry" >Dry</option>
-<option value="average" selected>Average</option>
-<option value="moist" >Moist</option>
-<option value="humid" >Humid</option></select></label>
-    <label>Maximum <select name="humidity_high"><option value="arid" >Arid</option>
-<option value="dry" >Dry</option>
-<option value="average">Average</option>
-<option value="moist" selected >Moist</option>
-<option value="humid" >Humid</option></select></label>
-  </fieldset>
+  <div data-crop-list></div>
+  <button type="button" data-add-crop>Add crop</button>
   <button type="submit">Download data-pack ZIP</button>
   <p role="status" aria-live="polite"></p>
 </form>
 <details><summary>Generated files</summary><pre></pre></details>
 </div>
 
-Leave the item ID empty to generate block tags only. Selected seasons form a tag name, such as spring_summer; the humidity bounds form a name such as average_moist. The generator uses required: false so an absent target mod does not invalidate the tag.
+Crops in the same tag are merged and deduplicated. The item ID is optional; supplying it also creates item tags.
 
 !!! warning
-    This tool produces category tags only; it does not change growth multipliers. See Agricultural data for custom parameters. Check pack_format in pack.mcmeta and validate the result in your target game version. [Agricultural data](data/agriculture.md).
+    The default 48 comes from the supplied core source. Change pack_format for other game versions and validate in the target game. This tool generates classification tags only; for custom growth multipliers see [Agricultural data](data/agriculture.md).
