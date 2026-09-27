@@ -34,6 +34,7 @@ nav:
           - Essential tags: en/data/tags.md
           - Common integrations:
               - Agricultural data: en/data/agriculture.md
+              - Crop data-pack generator: en/datapack_generator.md
               - Simulation-level conditions: en/data/simulation_conditions.md
               - Climate and world rules: en/data/climate_and_world.md
       - Resource-pack guide:
@@ -59,6 +60,7 @@ nav:
           - 基础标签: zh/data/tags.md
           - 常用兼容:
               - 农业内容: zh/data/agriculture.md
+              - 作物数据包生成器: zh/datapack_generator.md
               - 按模拟等级启用内容: zh/data/simulation_conditions.md
               - 气候与世界规则: zh/data/climate_and_world.md
       - 资源包制作:
@@ -80,8 +82,10 @@ markdown_extensions:
 
 extra_css:
   - _static/css/custom.css
+  - _static/css/datapack-generator.css
 extra_javascript:
   - _static/js/custom.js
+  - _static/js/datapack-generator.js
 
 docs_dir: source
 

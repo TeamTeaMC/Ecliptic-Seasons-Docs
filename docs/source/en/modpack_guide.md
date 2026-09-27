@@ -2,6 +2,8 @@
 
 Use data packs to add crop, biome, animal, climate, and snow behavior to a modpack. This page starts with the smallest crop integration and links to the rules for more advanced changes. Paths and fields follow the supplied current core source; check each Minecraft version you intend to support.
 
+[Crop data-pack generator](datapack_generator.md)
+
 ## Tags and standalone rules
 
 | Goal | Location | Use |
