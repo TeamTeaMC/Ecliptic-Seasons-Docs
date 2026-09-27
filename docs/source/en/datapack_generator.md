@@ -3,6 +3,7 @@
 Create seasonal and humidity tags for multiple crops. Drop local mod JARs to search for blocks and items by localized name or registry ID, or type IDs directly. Each crop can have its own settings; all rows are merged into one data pack.
 
 <div class="es-generator" data-es-datapack-generator data-language="en">
+<p data-script-notice class="es-script-notice" role="alert">The page script has not loaded. Open the built MkDocs or Read the Docs page; if this stays visible, hard-refresh and check the browser console.</p>
 <form>
   <div data-jar-drop class="es-jar-drop"><label>Drop one or more mod JARs here, or choose files<input type="file" accept=".jar,application/java-archive" multiple></label></div>
   <p data-jar-status role="status" aria-live="polite"></p>
@@ -13,7 +14,7 @@ Create seasonal and humidity tags for multiple crops. Drop local mod JARs to sea
   <div data-crop-list></div>
   <button type="button" data-add-crop>Add crop</button>
   <button type="submit">Download data-pack ZIP</button>
-  <p role="status" aria-live="polite"></p>
+  <p data-generator-status role="status" aria-live="polite"></p>
 </form>
 <details><summary>Generated files</summary><pre></pre></details>
 </div>

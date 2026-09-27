@@ -3,6 +3,7 @@
 批量制作作物适宜季节与湿度标签。拖入目标模组的本地 JAR 后，可以按中文名称、英文名称或注册 ID 搜索方块与物品；也可以直接输入 ID。每个作物可独立设置规则，下载时会合并到一个数据包。
 
 <div class="es-generator" data-es-datapack-generator data-language="zh">
+<p data-script-notice class="es-script-notice" role="alert">页面脚本尚未加载。请通过 MkDocs 或 Read the Docs 打开的网页使用生成器；如果一直显示此提示，请强制刷新并检查浏览器控制台。</p>
 <form>
   <div data-jar-drop class="es-jar-drop"><label>拖入一个或多个模组 JAR，或点击选择文件<input type="file" accept=".jar,application/java-archive" multiple></label></div>
   <p data-jar-status role="status" aria-live="polite"></p>
@@ -13,7 +14,7 @@
   <div data-crop-list></div>
   <button type="button" data-add-crop>添加作物</button>
   <button type="submit">下载数据包 ZIP</button>
-  <p role="status" aria-live="polite"></p>
+  <p data-generator-status role="status" aria-live="polite"></p>
 </form>
 <details><summary>生成的文件</summary><pre></pre></details>
 </div>

@@ -24,3 +24,5 @@
 .es-catalog-results { display: grid; gap: .2rem; max-height: 18rem; overflow-y: auto; }
 .es-catalog-results button { text-align: left; background: var(--md-code-bg-color); color: var(--md-default-fg-color); }
 .es-catalog-results button:hover { outline: 1px solid var(--md-primary-fg-color); }
+
+.es-script-notice { padding: .65rem; border: 1px solid #d78a28; border-radius: .25rem; }
